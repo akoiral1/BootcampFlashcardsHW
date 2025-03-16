@@ -12,6 +12,18 @@ let showingTerm = true;
 
 // Start with this function to simply display the card
 function displayCard() {
+    for(let i = 0; i < flashcards.length; i++){
+        let cur = flashcards[i];
+        let front = cur.term;
+
+        let cardDiv = document.createElement('div');
+        cardDiv.classList.add('card');
+        let text = document.createElement('p');
+        text.innerText = front;
+
+        cardDiv.appendChild(text);
+        cardDiv.dataset.flipped = "false";
+    }
 
 }
 
